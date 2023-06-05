@@ -1,0 +1,26 @@
+﻿<Page x:Class="Alchemist.Split"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Alchemist"
+      mc:Ignorable="d" 
+      d:DesignHeight="1080" 
+      d:DesignWidth="1155"
+      Title="Split">
+
+    <Grid Background="#FDDCFA">
+
+        <StackPanel Grid.Column="0">
+            <Button Content="Выбрать папку" Click="SelectFolderButton_Click" IsEnabled="{Binding IsFolderSelected}" />
+            <Button Content="Выбрать файл" Click="SelectFileButton_Click" IsEnabled="{Binding IsFolderSelected}" />
+            <Button Content="Разделить" Click="SplitButton_Click" IsEnabled="{Binding IsSplitEnabled}" />
+            <TextBlock Text="Сообщение об ошибке:" Grid.Row="3" FontWeight="Bold" Margin="0,10,0,0" />
+            <TextBlock x:Name="statusTextBlock" Grid.Row="4" Foreground="Red" Margin="0,5,0,0" Visibility="Collapsed" />
+
+        </StackPanel>
+
+        
+
+    </Grid>
+</Page>
