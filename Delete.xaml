@@ -5,10 +5,21 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Alchemist"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" 
-      d:DesignWidth="1155"
+      d:DesignHeight="600" 
+      d:DesignWidth="800"
       Title="Delete">
 
     <Grid Background="#FDDCFA">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="filePathTextBlock" TextWrapping="Wrap" Margin="110,90,146,457" Grid.Column="1" />
+         <Button Content="1. Select PDF File" Click="SelectFileButton_Click" Grid.Column="1" Margin="110,41,110,539" />
+        <TextBlock Text="Selected File:" Margin="10,103,210,481" Grid.Column="1" />
+        <TextBox x:Name="pageNumberTextBox" Grid.Column="1" Margin="110,192,110,379" />
+        <TextBlock Text="2. Enter the Page Number you want to delete:" Grid.Column="1" Margin="80,156,80,413" />
+        <Button Content="3. Delete" Click="DeleteButton_Click" Margin="137,250,137,300" Grid.Column="1" />
     </Grid>
 </Page>

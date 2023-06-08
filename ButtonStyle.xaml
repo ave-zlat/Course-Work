@@ -1,12 +1,6 @@
 ﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
-    <ImageBrush x:Key="add_button"
-                ImageSource="C:\Users\user\University\2023\protection of chickens_by_an_owl\Alchemist\Images\Add.png"
-                Stretch="Uniform" />
-    <ImageBrush x:Key="hovered_add_button"
-                ImageSource="C:\Users\user\University\2023\protection of chickens_by_an_owl\Alchemist\Images\hover_Add.png"
-                Stretch="Uniform" />
     <ImageBrush x:Key="close_button"
                 ImageSource="C:\Users\user\University\2023\protection of chickens_by_an_owl\Alchemist\Images\Close.png"
                 Stretch="Uniform" />
@@ -30,15 +24,6 @@
                 Stretch="Uniform" />
     <ImageBrush x:Key="inactive_delete_button"
                 ImageSource="C:\Users\user\University\2023\protection of chickens_by_an_owl\Alchemist\Images\Disabled_Delete.png"
-                Stretch="Uniform" />
-    <ImageBrush x:Key="edit_button"
-                ImageSource="C:\Users\user\University\2023\protection of chickens_by_an_owl\Alchemist\Images\Edit.png"
-                Stretch="Uniform" />
-    <ImageBrush x:Key="hovered_edit_button"
-                ImageSource="C:\Users\user\University\2023\protection of chickens_by_an_owl\Alchemist\Images\hover_Edit.png"
-                Stretch="Uniform" />
-    <ImageBrush x:Key="inactive_edit_button"
-                ImageSource="C:\Users\user\University\2023\protection of chickens_by_an_owl\Alchemist\Images\Disabled_Edit.png"
                 Stretch="Uniform" />
     <ImageBrush x:Key="home_button"
                 ImageSource="C:\Users\user\University\2023\protection of chickens_by_an_owl\Alchemist\Images\Love.png"
@@ -170,7 +155,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
+
     <Style x:Key="SplitBtnStyle"
            TargetType="RadioButton">
         <Setter Property="HorizontalAlignment"
@@ -221,58 +206,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    
-    <Style x:Key="EditBtnStyle"
-           TargetType="RadioButton">
-        <Setter Property="HorizontalAlignment"
-                Value="Center" />
-        <Setter Property="VerticalAlignment"
-                Value="Center" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="RadioButton">
-                    <Border x:Name="border"
-                            Height="95"
-                            Width="95"
-                            BorderThickness="0"
-                            Background="{StaticResource edit_button}">
-                        <Grid>
-                            <Border x:Name="Indicator"
-                                    Height="80"
-                                    Width="2"
-                                    HorizontalAlignment="Left"
-                                    VerticalAlignment="Center"
-                                    Background="#7DD2A4"
-                                    Visibility="Collapsed"
-                                    CornerRadius="2" />
-                            <ContentPresenter />
-                        </Grid>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver"
-                                 Value="True">
-                            <Setter Property="Background"
-                                    TargetName="border"
-                                    Value="{StaticResource hovered_edit_button}" />
-                            <Setter Property="Visibility"
-                                    TargetName="Indicator"
-                                    Value="Visible" />
-                        </Trigger>
-                        <Trigger Property="IsChecked"
-                                 Value="True">
-                            <Setter Property="Background"
-                                    TargetName="border"
-                                    Value="{StaticResource inactive_edit_button}" />
-                            <Setter Property="Visibility"
-                                    TargetName="Indicator"
-                                    Value="Visible" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    
+
     <Style x:Key="DeleteBtnStyle"
            TargetType="RadioButton">
         <Setter Property="HorizontalAlignment"
@@ -413,40 +347,4 @@
             </Setter.Value>
         </Setter>
     </Style>
-
-    <Style x:Key="AddBtnStyle"
-           TargetType="{x:Type Button}">
-        <Setter Property="Height"
-                Value="300" />
-        <Setter Property="Width"
-                Value="300" />
-        <Setter Property="HorizontalAlignment"
-                Value="Center" />
-        <Setter Property="VerticalAlignment"
-                Value="Center" />
-        <Setter Property="Template">
-            <Setter.Value>
-                <ControlTemplate TargetType="{x:Type Button}">
-                    <Border x:Name="border"
-                            BorderThickness="0"
-                            Background="{StaticResource add_button}">
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsMouseOver"
-                                 Value="True">
-                            <Setter Property="Background"
-                                    TargetName="border"
-                                    Value="{StaticResource hovered_add_button}" />
-                        </Trigger>
-                        <Trigger Property="IsPressed"
-                                 Value="True">
-                            <Setter Property="Opacity"
-                                    Value="0.5" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Setter.Value>
-        </Setter>
-    </Style>
-    
 </ResourceDictionary>

@@ -10,9 +10,6 @@ using System.ComponentModel;
 
 namespace Alchemist
 {
-    /// <summary>
-    /// Interaction logic for Split.xaml
-    /// </summary>
     public partial class Split : Page
     {
         private string selectedFolderPath;
@@ -118,50 +115,5 @@ namespace Alchemist
                 statusTextBlock.Visibility = Visibility.Visible;
             }
         }
-
-        //private void SelectPdfButton_Click(object sender, RoutedEventArgs e)
-        //{
-        //    OpenFileDialog openFileDialog = new OpenFileDialog();
-        //    openFileDialog.Filter = "PDF Files (*.pdf)|*.pdf";
-        //    openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
-        //    openFileDialog.Multiselect = false;
-
-        //    if (openFileDialog.ShowDialog() == true)
-        //    {
-        //        string selectedFilePath = openFileDialog.FileName;
-        //        SplitPdf(selectedFilePath);
-        //    }
-        //}
-
-        //private void SplitPdf(string filePath)
-        //{
-        //    if (!File.Exists(filePath))
-        //    {
-        //        MessageBox.Show("Выбранный файл не существует.");
-        //        return;
-        //    }
-
-        //    if (System.IO.Path.GetExtension(filePath) != ".pdf")
-        //    {
-        //        MessageBox.Show("Выбранный файл не является PDF файлом.");
-        //        return;
-        //    }
-
-        //    using (PdfDocument inputDocument = PdfReader.Open(filePath, PdfDocumentOpenMode.Import))
-        //    {
-        //        for (int pageIndex = 0; pageIndex < inputDocument.PageCount; pageIndex++)
-        //        {
-        //            string outputFileName = $"{System.IO.Path.GetFileNameWithoutExtension(filePath)}_Page{pageIndex + 1}.pdf";
-        //            string outputFilePath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(filePath), outputFileName);
-
-        //            using (PdfDocument outputDocument = new PdfDocument())
-        //            {
-        //                outputDocument.AddPage(inputDocument.Pages[pageIndex]);
-        //                outputDocument.Save(outputFilePath);
-        //            }
-        //        }
-        //    }
-
-        //}
     }
 }

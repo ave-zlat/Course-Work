@@ -5,12 +5,51 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Alchemist"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" 
-      d:DesignWidth="1155"
+      d:DesignHeight="600" 
+      d:DesignWidth="800"
       Title="Convert">
 
     <Grid Background="#FDDCFA">
-        <TextBlock Text="Convert"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+            <RowDefinition Height="0.2*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="400"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
 
+        <Label Content="Output Folder:" Margin="13,30,23,52" Grid.Column="1" Grid.RowSpan="2"/>
+        <Button Content="1. Select Output Folder" Click="SelectOutputFolderButton_Click" Grid.Column="1" Margin="10,9,10,19" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Button.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleY="1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.RenderTransform>
+        </Button>
+
+        <Label Content="2. Enter output File Name below:" Grid.Row="3" Margin="13,25,137,1" Grid.Column="1"/>
+        <TextBox x:Name="outputFileNameTextBox" Grid.Row="3" Grid.Column="1" Margin="10,59,10,6" Height="NaN" Grid.RowSpan="2"/>
+
+        <Label Content="Selected Images:" Grid.Row="6" Grid.Column="1" Margin="24,10,279,10"/>
+        <TextBox x:Name="selectedImagesTextBox" Grid.Row="6" Margin="146,7,20,8" IsReadOnly="True" Height="NaN" Grid.Column="1"/>
+
+        <Button Content="3. Select Images" Click="SelectImagesButton_Click" Grid.Row="5" Grid.Column="1" Margin="5,10,15,10" Height="NaN"/>
+
+        <Button Content="4. Convert" Click="ConvertButton_Click" Grid.Row="7"  Height="NaN" Margin="40,6,40,16" Grid.Column="1"/>
+
+        <TextBox x:Name="outputTextBox" Grid.Row="8" Grid.Column="1" Margin="32,10,32,10" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" IsReadOnly="True" Height="NaN"/>
     </Grid>
 </Page>

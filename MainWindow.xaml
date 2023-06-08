@@ -6,9 +6,9 @@
         xmlns:local="clr-namespace:Alchemist"
         mc:Ignorable="d"
         Title="MainWindow" 
-        Height="1080" 
-        Width="1280"       
-        WindowState="Maximized"
+        Height="600" 
+        Width="1000"       
+        WindowState="Normal"
         ResizeMode="NoResize" 
         WindowStartupLocation="CenterScreen" 
         WindowStyle="None">
@@ -17,7 +17,7 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="125" />
-                <ColumnDefinition Width="1155" />
+                <ColumnDefinition Width="875" />
             </Grid.ColumnDefinitions>
 
             <Grid x:Name="nav_pnl"
@@ -45,19 +45,15 @@
                                  Style="{StaticResource ConvertBtnStyle}" 
                                  GroupName="Navigation" 
                                  Click="RadioButton_Click"/>
-                    <RadioButton x:Name="Edit" 
-                                 Style="{StaticResource EditBtnStyle}" 
-                                 GroupName="Navigation" 
-                                 Click="RadioButton_Click"/>
                     <RadioButton x:Name="Delete" 
                                  Style="{StaticResource DeleteBtnStyle}" 
                                  GroupName="Navigation" 
                                  Click="RadioButton_Click"/>
-                    </UniformGrid>
+                </UniformGrid>
 
             </Grid>
             <Grid Grid.Column="1">
-                <Frame x:Name="contentFrame" Grid.Column="1"/>
+                <Frame x:Name="contentFrame" NavigationUIVisibility="Hidden" />
                 <Button x:Name="CloseButton" 
                 Style="{StaticResource CloseBtnStyle}" Click="CloseButton_Click"/>
             </Grid>

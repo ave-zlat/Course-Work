@@ -5,22 +5,20 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Alchemist"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" 
-      d:DesignWidth="1155"
+      d:DesignHeight="600" 
+      d:DesignWidth="875"
       Title="Split">
 
     <Grid Background="#FDDCFA">
 
-        <StackPanel Grid.Column="0">
-            <Button Content="Выбрать папку" Click="SelectFolderButton_Click" IsEnabled="{Binding IsFolderSelected}" />
-            <Button Content="Выбрать файл" Click="SelectFileButton_Click" IsEnabled="{Binding IsFolderSelected}" />
-            <Button Content="Разделить" Click="SplitButton_Click" IsEnabled="{Binding IsSplitEnabled}" />
-            <TextBlock Text="Сообщение об ошибке:" Grid.Row="3" FontWeight="Bold" Margin="0,10,0,0" />
-            <TextBlock x:Name="statusTextBlock" Grid.Row="4" Foreground="Red" Margin="0,5,0,0" Visibility="Collapsed" />
 
-        </StackPanel>
 
-        
+        <Button Content="1. Выбрать папку" Click="SelectFolderButton_Click" IsEnabled="{Binding IsFolderSelected}" Margin="344,42,342,538" />
+        <Button Content="2. Выбрать файл" Click="SelectFileButton_Click" IsEnabled="{Binding IsFolderSelected}" Margin="344,105,342,475" />
+        <Button Content="3. Разделить" Click="SplitButton_Click" IsEnabled="{Binding IsSplitEnabled}" Margin="344,170,342,410" />
+        <TextBlock Text="Информация:" FontWeight="Bold" Margin="82,214,80,300" Grid.Column="1" />
+        <TextBlock x:Name="statusTextBlock" Margin="167,214,0,313" />
+
 
     </Grid>
 </Page>

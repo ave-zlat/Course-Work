@@ -5,12 +5,18 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Alchemist"
       mc:Ignorable="d" 
-      d:DesignHeight="1080" 
-      d:DesignWidth="1155"
+      d:DesignHeight="600" 
+      d:DesignWidth="875"
       Title="Home">
-
+    
     <Grid Background="#FDDCFA">
-        <Button x:Name="AddButton" 
-                Style="{StaticResource AddBtnStyle}" Click="AddButton_Click" />
+        <TextBlock Text="PDF Alchemist"
+                   FontFamily="/Fonts/#Magic Owl Personal Use WyO0O"
+                   FontSize="100" Margin="64,76,231,408">
+           
+        </TextBlock>
+        <Image Source="C:\Users\user\University\2023\protection of chickens_by_an_owl\Alchemist\Images\Mana.png" Margin="597,322,20,20"/>
+        <Image Source="C:\Users\user\University\2023\protection of chickens_by_an_owl\Alchemist\Images\Stick.png" Margin="610,83,144,401" />
+
     </Grid>
 </Page>

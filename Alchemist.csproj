@@ -8,8 +8,38 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\BillyArgelFont-vZ8Z.otf" />
+    <None Remove="Fonts\CandyCanePersonalUseRegular-WyaPv.ttf" />
+    <None Remove="Fonts\Dreambig-axvza.ttf" />
+    <None Remove="Fonts\Dreambig-WynEV.otf" />
+    <None Remove="Fonts\FeelfreePersonalUseRegular-lg2Bw.ttf" />
+    <None Remove="Fonts\GothicFlames.ttf" />
+    <None Remove="Fonts\MagicOwlPersonalUse-WyO0O.otf" />
+    <None Remove="Fonts\WonderworldPersonalUseRegular-gxdo3.otf" />
+    <None Remove="Images\Mana.png" />
+    <None Remove="Images\Stick.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\WonderworldPersonalUseRegular-gxdo3.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Ookii.Dialogs.Wpf" Version="5.0.1" />
+    <PackageReference Include="PdfiumViewer" Version="2.13.0" />
     <PackageReference Include="PdfSharp" Version="1.50.5147" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Fonts\BillyArgelFont-vZ8Z.otf" />
+    <Resource Include="Fonts\CandyCanePersonalUseRegular-WyaPv.ttf" />
+    <Resource Include="Fonts\Dreambig-axvza.ttf" />
+    <Resource Include="Fonts\Dreambig-WynEV.otf" />
+    <Resource Include="Fonts\FeelfreePersonalUseRegular-lg2Bw.ttf" />
+    <Resource Include="Fonts\GothicFlames.ttf" />
+    <Resource Include="Fonts\MagicOwlPersonalUse-WyO0O.otf" />
+    <Resource Include="Images\Mana.png" />
+    <Resource Include="Images\Stick.png" />
   </ItemGroup>
 
 </Project>

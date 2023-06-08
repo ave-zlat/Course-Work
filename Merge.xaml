@@ -5,10 +5,25 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Alchemist"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="600" 
+      d:DesignWidth="875"
       Title="Merge">
 
-    <Grid>
-        
+    <Grid Background="#FDDCFA" Margin="0,-14,0,14">
+
+        <Button Content="1. Выбрать директорию" 
+                    Width="200" 
+                    Height="50" 
+                    Click="SelectOutputDirectoryButton_Click" Margin="338,59,337,491"/>
+
+
+        <Button Content="2. Выбрать файлы" Width="200" Height="50" Click="SelectFilesButton_Click" Margin="338,148,337,402" />
+        <TextBlock Text="3. Введите имя для объединенного файла:" Width="270" Height="18" FontWeight="Bold" Margin="300,242,305,340"/>
+        <TextBox x:Name="outputFileNameTextBox" Height="67" Width="169" Margin="352,266,353,266"/>
+        <TextBlock x:Name="statusTextBlock"  Margin="262,472,264,63" />
+        <Button Content="4. Merge" Width="200" Height="50" Click="MergeButton_Click" Margin="338,391,337,159"/>
+
+
+
     </Grid>
 </Page>
